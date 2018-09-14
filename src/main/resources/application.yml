@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: 'sofa-rpc-hystrix-with-spring-cloud-example'
+server:
+  port: 8080
+
+hystrix:
+  threadpool:
+    'com.scienjus.sofa.rpc.hystrix.HelloService':
+      coreSize: 50
+      maximumSize: 100
+      maxQueueSize: 1024
+      keepAliveTimeMinutes: 10
+      queueSizeRejectionThreshold: 768
+      allowMaximumSizeToDivergeFromCoreSize: true
