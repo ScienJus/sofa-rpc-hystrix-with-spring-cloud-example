@@ -13,3 +13,9 @@ hystrix:
       keepAliveTimeMinutes: 10
       queueSizeRejectionThreshold: 768
       allowMaximumSizeToDivergeFromCoreSize: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

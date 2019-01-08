@@ -32,7 +32,6 @@ public class QuickStartClient {
             ConsumerConfig<HelloService> consumerConfig = new ConsumerConfig<HelloService>()
                     .setInterfaceId(HelloService.class.getName())
                     .setProtocol("bolt")
-                    .setFilterRef(Collections.<Filter>singletonList(new HystrixFilter()))
                     .setDirectUrl("bolt://127.0.0.1:12200");
 
             RpcConfigs.putValue(HystrixConstants.SOFA_HYSTRIX_ENABLED, true);
